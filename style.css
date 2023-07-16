@@ -1,6 +1,7 @@
 :root {
-  --pink: #e62779;
   --bg: #1a1a1a;
+  --pink: #e62779;
+  --yellow: #e3f300;
   --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -18,8 +19,13 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: var(--bg);
   z-index: -1;
-  filter: contrast(50%);
+  filter: contrast(75%);
 }
 
 .hero {
@@ -45,14 +51,15 @@ body {
 }
 
 .hero a {
-  color: var(--pink);
+  font-weight: 500;
+  color: var(--yellow);
   background-color: white;
   box-shadow: var(--shadow);
 }
 
 .hero a:hover {
   color: white;
-  background-color: var(--pink);
+  background-color: var(--yellow);
 }
 
 /* Media query */
