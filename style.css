@@ -107,7 +107,9 @@ body {
 .home h2,
 .info h2,
 .story h2,
-.gallery h2 {
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
   color: var(--yellow);
   font-family: 'Parisienne', cursive;
   font-size: 5rem;
@@ -152,7 +154,9 @@ body {
 
 .info,
 .story,
-.gallery {
+.gallery,
+.rsvp,
+.gifts {
   min-height: 100vh;
   padding-top: 10rem;
   padding-bottom: 8rem;
@@ -193,7 +197,8 @@ body {
 }
 
 .story span,
-.gallery span {
+.gallery span,
+.gifts span {
   text-transform: uppercase;
   color: #666;
   font-size: 0.9rem;
@@ -203,7 +208,9 @@ body {
 }
 
 .story p,
-.gallery p {
+.gallery p,
+.rsvp p,
+.gifts p {
   font-size: 1rem;
   font-weight: 300;
 }
@@ -294,6 +301,46 @@ body {
 
 .gallery {
   background-color: #f8f6e7;
+}
+
+.rsvp {
+  background-color: var(--bg);
+}
+.rsvp p {
+  color: white;
+}
+.rsvp form label {
+  color: white;
+}
+.rsvp button {
+  background-color: var(--yellow);
+  color: white;
+  border: 1px solid var(--yellow);
+}
+.rsvp button:hover {
+  background-color: white;
+  color: var(--yellow);
+  border: 1px solid white;
+}
+
+footer {
+  padding: 3px;
+  background-color: var(--yellow);
+  color: white;
+}
+footer a {
+  color: var(--bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
 }
 
 /* Media query */
