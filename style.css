@@ -29,7 +29,7 @@ body {
   left: 0;
   background-image: url(img/background.jpg);
   background-attachment: fixed;
-  filter: contrast(55%);
+  filter: blur(2px) brightness(0.8) contrast(90%);
 }
 
 .hero {
