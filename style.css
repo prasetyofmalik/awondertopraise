@@ -1,19 +1,19 @@
 :root {
   --bg: #23272a;
   --pink: #e62779;
-  --yellow: #ffc40c;
+  --yellow: #0080fe;
   --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {
   font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 4000px;
 }
 
 .hero::before,
 .home::before {
-  content: '';
+  content: "";
   background-size: cover;
   background-color: var(--bg);
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(img/background.jpg);
+  background-image: url(img/background.JPG);
   background-attachment: fixed;
   filter: blur(2px) brightness(0.8) contrast(90%);
 }
@@ -37,12 +37,14 @@ body {
   min-height: 100vh;
 }
 
-.hero h1, .hero h4, .hero p {
+.hero h1,
+.hero h4,
+.hero p {
   text-shadow: var(--shadow);
 }
 
 .hero h1 {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   font-size: 6rem;
 }
 
@@ -71,17 +73,18 @@ body {
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
 }
 .mynavbar .offcanvas-end {
   width: 270px !important;
   border: 0;
 }
-.mynavbar .navbar-brand, 
+.mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   font-size: 2rem;
   font-weight: bold;
+  color: var(--yellow);
 }
 .mynavbar .nav-link {
   font-weight: 600;
@@ -91,7 +94,7 @@ body {
 
 .home::before {
   position: absolute;
-  background-image: url(img/bg-floral.png);
+  background-image: url(img/bg-1.JPG);
   margin-top: -9.65rem;
   height: 120%;
   filter: opacity(15%);
@@ -111,7 +114,7 @@ body {
 .rsvp h2,
 .gifts h2 {
   color: var(--yellow);
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   font-size: 5rem;
 }
 
@@ -129,7 +132,7 @@ body {
   margin-top: 100px;
 }
 .home .couple h3 {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   font-size: 3rem;
   color: var(--yellow);
 }
@@ -193,7 +196,8 @@ body {
 }
 
 .story {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
+  background: linear-gradient(to bottom, #f8f8ff, #fff5ee);
 }
 
 .story span,
@@ -222,7 +226,7 @@ body {
   position: relative;
 }
 .timeline::before {
-  content: '';
+  content: "";
   top: 30px;
   bottom: 110px;
   position: absolute;
@@ -236,11 +240,11 @@ body {
 }
 .timeline li::before,
 .timeline li::after {
-  content: '';
+  content: "";
   display: table;
 }
 .timeline li::after {
-  clear:both;
+  clear: both;
 }
 .timeline li .timeline-image {
   width: 160px;
@@ -262,7 +266,7 @@ body {
   background-color: #fff;
 }
 .timeline li .timeline-panel::before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   border-top: 15px solid transparent;
@@ -273,7 +277,7 @@ body {
   right: -15px;
 }
 .timeline li .timeline-panel::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   border-top: 14px solid transparent;
@@ -300,7 +304,7 @@ body {
 }
 
 .gallery {
-  background-color: #f8f6e7;
+  background: linear-gradient(to top, #23272a, #fff5ee);
 }
 
 .rsvp {
@@ -321,6 +325,25 @@ body {
   background-color: white;
   color: var(--yellow);
   border: 1px solid white;
+}
+
+.gifts {
+  position: relative;
+  z-index: 1;
+}
+
+.gifts::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bg-2.JPG);
+  filter: opacity(30%);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
 footer {
@@ -352,7 +375,7 @@ footer li {
   right: 2rem;
   cursor: pointer;
   color: white;
-  opacity: .5;
+  opacity: 0.5;
   mix-blend-mode: difference;
   animation: rotating 4s linear infinite;
   transform-origin: center;
@@ -365,10 +388,10 @@ footer li {
 @keyframes rotating {
   from {
     transform: rotate(0);
-  } to {
+  }
+  to {
     transform: rotate(360deg);
   }
-  
 }
 
 /* Media query */
@@ -452,11 +475,8 @@ footer li {
     margin-left: auto;
     margin-right: auto;
   }
-  .mynavbar .offcanvas-header {
-    margin-left: -35px;
-  }
   .offcanvas-backdrop.show {
-    opacity: .8;
+    opacity: 0.8;
     background-color: rgb(133, 133, 133);
   }
   .timeline li .timeline-image {
@@ -472,5 +492,12 @@ footer li {
   }
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+  .glightbox-container .gslide img {
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
